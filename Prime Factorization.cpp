@@ -17,7 +17,6 @@ typedef long long ll;
 // if n is a composite number then there is atleast a one prime divisor of N below sqrt(N);
 
 // Time Complexity -> O(sqrt(n))
-// By using sieve we can reduce the time complexity to O(log(n))
 
 void primeFact (int n) {
   
@@ -36,6 +35,24 @@ void primeFact (int n) {
     cout << n << "^" << 1 << "\n";
   }
   
+}
+
+// Using sieve we can reduce the time complexity to O(log(n))
+
+vector <int> arr(1000001, -1);
+
+void sieve() {
+  int maxN = 1000000;
+  
+  for (int i = 2; i <= sqrt(maxN); i++) {
+    if (arr[i] == -1) {
+      for (int j = i; j <= maxN; j++) {
+        if (arr[j] == -1) {
+          arr[j] = i;
+        }
+      }
+    }
+  }
 }
 
 signed main()
