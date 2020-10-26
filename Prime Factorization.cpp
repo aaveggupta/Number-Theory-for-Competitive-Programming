@@ -17,6 +17,7 @@ typedef long long ll;
 // if n is a composite number then there is atleast a one prime divisor of N below sqrt(N);
 
 // Time Complexity -> O(sqrt(n))
+// By using sieve we can reduce the time complexity to O(log(n))
 
 void primeFact (int n) {
   
