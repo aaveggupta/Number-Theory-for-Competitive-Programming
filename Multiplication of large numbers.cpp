@@ -90,6 +90,9 @@ signed main()
           flag = 1;
         }
       }
+    
+    if (flag == 0)
+        cout << 0;
 
       cout << "\n";
 
